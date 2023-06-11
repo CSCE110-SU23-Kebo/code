@@ -72,7 +72,7 @@ print(f"{'9' in phone}")
 print(f"Where is 9? {phone.find('9')}")
 '''
 
-# Password validation (part 1)
+# Password validation (part 1) using python String methods
 password = input("Enter a password: ")
 print(f"password.isupper(): {password.isupper()}")
 print(f"password.islower(): {password.islower()}")
