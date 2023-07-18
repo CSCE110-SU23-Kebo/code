@@ -1,0 +1,2 @@
+Boston         $620            
+The inverse is 0.3183098861837907

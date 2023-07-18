@@ -47,13 +47,14 @@ def add_books(library):
         title = entry[:-11].strip()
         print(f"Is the ISBN valid? {ISBN_is_valid(ISBN)}")
         print(f"Is ISBN in the library? {ISBN_in_library (library, ISBN)}")
-        library[ISBN] = [title, -1]
+        library[ISBN] = [title, -1] # Initialization of a book
     print(library)
 
 
 def ISBN_is_valid(ISBN):
     """
-    Checks if an ISBN is Valid
+    Checks if an ISBN is Valid:
+    ~ The ISBN must be unique, ten digits, and should contain numbers only.
     """
     pass
 
@@ -75,8 +76,23 @@ def create_collections(library):
     """
     # library = { ISBN1: ['spiderman 2023', 23], ISBN2: ['dragon ball super', 23],  ISBN1: ['miles morales', 6], ISBN2: ['deadpool', 8]}
     
+
     print(f"The keys (ISBN) in the library are: {library.keys()}")
     print(f"The values ([title, collection]) in the library are: {library.values()} ")
+
+    library_size = len(library)
+    available_books = [library[ISBN][1] for ISBN in library.keys() if library[ISBN][1] == -1]
+    print(f"List of available textbooks: {available_books}")
+    number_of_available_books = len(available_books)
+    print(f"The number of books in the library is: {library_size}")
+    print(f"The number of books in the library is: {number_of_available_books}")
+
+    collection_size = int(input("What is the size the collection?"))
+    number_of_collections = ceil(number_of_available_books / collection_size)
+    print(f"The number of collections is: {number_of_collections}")
+
+    # Create a loop that repeats number_of_collections times and set the collection values to a collection number
+
 
 
 def sort_collections(library):
@@ -92,6 +108,7 @@ def delete_collection(library):
     pass
 
 
-main()
+if __name__ == "__main__":
+    main() # Called only if the collections is running as standalone
 
 

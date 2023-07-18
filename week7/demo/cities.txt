@@ -1,0 +1,8 @@
+city name       ticket price   
+San Miguel      $900            
+Tijuana         $1200           
+Rio de Janeiro  $1500           
+Merida          $860            
+Miami           $800            
+Orlando         $190            
+Fort Lauderdale $260            
