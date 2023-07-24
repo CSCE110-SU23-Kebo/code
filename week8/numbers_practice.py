@@ -116,3 +116,53 @@ AND
 print(f"AND: {x} & {y} = {x & y}")
 print(f"AND: {bin(x)[2:]} & {bin(y)[2:]} = {bin(x&y)[2:]}")
 
+
+# Bitwise OR
+
+"""
+    1101
+OR
+    1100
+    ____
+    1101
+"""     
+print(f"OR: {x} | {y} = {x | y}")
+print(f"OR: {bin(x)[2:]} | {bin(y)[2:]} = {bin(x|y)[2:]}")
+
+# Bitwise XOR
+
+"""
+    1101
+XOR
+    1100
+    _____
+    0001
+
+"""
+print(f"XOR: {x} ^ {y} = {x ^ y}")
+print(f"XOR: {bin(x)[2:]} | {bin(y)[2:]} = {bin(x^y)[2:]}")
+
+# Shifting binary numbers
+# shift left : x << n
+# Muliplication by 2^n
+
+x = 12 # 1100
+# 1100 << 3 -> 1100000
+print(f"{bin(x)[2:]} << 3 is {bin(x<<3)}")
+print(f"{bin(x)[2:]} << 3 is {x<<3}")
+
+"""
+Shift right
+x >> n
+Floor division by 2^n
+"""
+
+x = 12 # 1100
+# 1100 >> 3 -> 0001
+print(f"{bin(x)[2:]} >> 3 is {bin(x>>3)}")
+print(f"{bin(x)[2:]} >> 3 is {x>>3}")
+
+x = 25 # 11001
+# 11001 >> 3 -> 00011
+print(f"{bin(x)[2:]} >> 3 is {bin(x>>3)}")
+print(f"{bin(x)[2:]} >> 3 is {x>>3}")
